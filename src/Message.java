@@ -1,4 +1,4 @@
-public class Message {
+public class Message implements Comparable{
     private int id;
     private String text;
 
@@ -29,6 +29,18 @@ public class Message {
                 "id=" + id +
                 ", text='" + text + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compare(Object obj) {
+        Message message = (Message) obj;
+        if( this.id > message.id) {
+            return 1;
+        }
+        if( this.id < message.id) {
+            return -1;
+        }
+        return 0;
     }
 }
 

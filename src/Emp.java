@@ -1,4 +1,4 @@
-public class Emp {
+public class Emp implements Comparable {
     private int id;
     private String name;
     private int sal;
@@ -40,6 +40,18 @@ public class Emp {
                 ", name='" + name + '\'' +
                 ", sal=" + sal +
                 '}';
+    }
+
+    @Override
+    public int compare(Object obj) {
+        Emp emp = (Emp) obj;
+        if(this.getSal() > emp.getSal()) {
+            return  1;
+        }
+        if(this.getSal() < emp.getSal()) {
+            return  -1;
+        }
+        return 0;
     }
 }
 

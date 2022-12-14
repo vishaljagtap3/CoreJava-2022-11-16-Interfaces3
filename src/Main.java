@@ -15,7 +15,8 @@ public class Main {
         emps[3] = new Emp(55, "BB", 8450);
         emps[4] = new Emp(240, "CC", 6900);
 
-        Util.sort(emps, new EmpComparator());
+        //Util.sort(emps, new EmpComparator());
+        Util.sort(emps);
         for(Emp emp : emps) {
             System.out.println(emp);
         }
@@ -37,7 +38,9 @@ public class Main {
         messages[3] = new Message(68, "C++ is better");
         messages[4] = new Message(202, "Kotlin is modern!");
 
-        Util.sort(messages, new MessageComparator());
+        //Util.sort(messages, new MessageComparator());
+
+        Util.sort(messages);
 
         for(Message message : messages) {
             System.out.println(message);
